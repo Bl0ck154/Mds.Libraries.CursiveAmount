@@ -9,51 +9,26 @@ namespace Mds.Libraries.CursiveAmount.Implementations
         internal RussianLanguage() { }
 
 
-        public ICurrencyFormatter RussianRuble
-        {
-            get
-            {
-                var formatter = new CurrencyFormatter(grades, numbers)
-                {
-                    MajorCurrency = new Localizable()
-                    {
-                        [0] = "рублей",
-                        [1] = "рубль",
-                        Default = "рубля"
-                    },
-                    MinorCurrency = new Localizable()
-                    {
-                        [0] = "копеек",
-                        [1] = "копейка",
-                        Default = "копейки",
-                        Patcher = (int number, string value) =>
-                        {
-                            switch (number)
-                            {
-                                case 1:
-                                    return "одна";
-                                case 2:
-                                    return "две";
-
-                                default:
-                                    return value;
-                            }
-                        }
-                    }
-                };
-
-                return formatter;
-            }
-        }
-
-
-        private Dictionary<int, Localizable> grades { get; } = new Dictionary<int, Localizable>()
+        private Dictionary<long, Localizable> Grades { get; } = new Dictionary<long, Localizable>()
         {
             [1000] = new Localizable()
             {
                 [0] = "тысяч",
                 [1] = "тысяча",
-                Default = "тысячи"
+                Default = "тысячи",
+                Patcher = (long number, string value) =>
+                {
+                    switch (number)
+                    {
+                        case 1:
+                            return "одна";
+                        case 2:
+                            return "две";
+
+                        default:
+                            return value;
+                    }
+                }
             },
 
             [1000000] = new Localizable()
@@ -67,10 +42,13 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             {
                 [0] = "миллиардов",
                 [1] = "миллиард",
-                Default = "миллиарда"
+                [2] = "миллиарда",
+                [3] = "миллиарда",
+                [4] = "миллиарда",
+                Default = "миллиардов"
             },
         };
-        private Dictionary<int, string> numbers { get; } = new Dictionary<int, string>
+        private Dictionary<long, string> Numbers { get; } = new Dictionary<long, string>
         {
             [0] = "ноль",
             [1] = "один",
@@ -112,5 +90,45 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             [800] = "восемьсот",
             [900] = "девятьсот",
         };
+
+
+        #region ILanguage
+        ICurrencyFormatter ILanguage.RussianRuble
+        {
+            get
+            {
+                var formatter = new CurrencyFormatter(Grades, Numbers)
+                {
+                    MajorCurrency = new Localizable()
+                    {
+                        [0] = "рублей",
+                        [1] = "рубль",
+                        Default = "рубля"
+                    },
+                    MinorCurrency = new Localizable()
+                    {
+                        [0] = "копеек",
+                        [1] = "копейка",
+                        Default = "копейки",
+                        Patcher = (long number, string value) =>
+                        {
+                            switch (number)
+                            {
+                                case 1:
+                                    return "одна";
+                                case 2:
+                                    return "две";
+
+                                default:
+                                    return value;
+                            }
+                        }
+                    }
+                };
+
+                return formatter;
+            }
+        }
+        #endregion
     }
 }

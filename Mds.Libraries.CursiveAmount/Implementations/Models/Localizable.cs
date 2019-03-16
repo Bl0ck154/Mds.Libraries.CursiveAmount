@@ -8,22 +8,22 @@ namespace Mds.Libraries.CursiveAmount.Implementations.Models
         internal Localizable(int divider = 10)
         {
             Default = string.Empty;
-            Patcher = (int number, string value) => value;
+            Patcher = (long number, string value) => value;
 
 
-            Values = new Dictionary<int, string>();
+            Values = new Dictionary<long, string>();
             Divider = divider;
         }
 
 
 
         internal string Default { get; set; }
-        internal Func<int, string, string> Patcher { get; set; }
+        internal Func<long, string, string> Patcher { get; set; }
 
-        private Dictionary<int, string> Values { get; }
+        private Dictionary<long, string> Values { get; }
         private int Divider { get; }
 
-        internal string this[int key]
+        internal string this[long key]
         {
             set
             {
@@ -32,7 +32,7 @@ namespace Mds.Libraries.CursiveAmount.Implementations.Models
         }
 
 
-        internal string Prepare(int value)
+        internal string Prepare(long value)
         {
             value = value % Divider;
 

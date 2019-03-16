@@ -2,7 +2,7 @@
 {
     public interface ICurrencyFormatter
     {
-        string Build(int amount);
+        string Build(long amount);
         string Build(double amount);
     }
 }
