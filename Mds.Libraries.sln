@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mds.Libraries.CursiveAmount", "Mds.Libraries.CursiveAmount\Mds.Libraries.CursiveAmount.csproj", "{1D939FE5-35DD-4753-8218-E93442A06B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mds.Libraries.CursiveAmount.Tests", "Mds.Libraries.CursiveAmount.Tests\Mds.Libraries.CursiveAmount.Tests.csproj", "{D9C36818-5DB2-4A05-96AD-9AEC5BD77A89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D939FE5-35DD-4753-8218-E93442A06B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D939FE5-35DD-4753-8218-E93442A06B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D939FE5-35DD-4753-8218-E93442A06B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C36818-5DB2-4A05-96AD-9AEC5BD77A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C36818-5DB2-4A05-96AD-9AEC5BD77A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C36818-5DB2-4A05-96AD-9AEC5BD77A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C36818-5DB2-4A05-96AD-9AEC5BD77A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
