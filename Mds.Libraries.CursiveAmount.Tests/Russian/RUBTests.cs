@@ -22,6 +22,22 @@ namespace Mds.Libraries.CursiveAmount.Tests.Russian
             Assert.AreEqual(expected, formatter.Build(0));
 
 
+            expected = "ноль рублей двадцать одна копейка";
+            Assert.AreEqual(expected, formatter.Build(0.21));
+
+            expected = "ноль рублей двадцать две копейки";
+            Assert.AreEqual(expected, formatter.Build(0.22));
+
+            expected = "ноль рублей двадцать три копейки";
+            Assert.AreEqual(expected, formatter.Build(0.23));
+
+            expected = "ноль рублей двадцать четыре копейки";
+            Assert.AreEqual(expected, formatter.Build(0.24));
+
+            expected = "ноль рублей тридцать копеек";
+            Assert.AreEqual(expected, formatter.Build(0.3));
+
+
             expected = "один рубль двадцать одна копейка";
             Assert.AreEqual(expected, formatter.Build(1.21));
 
@@ -47,6 +63,12 @@ namespace Mds.Libraries.CursiveAmount.Tests.Russian
 
             expected = "десять тысяч рублей ноль копеек";
             Assert.AreEqual(expected, formatter.Build(10000));
+
+            expected = "двадцать одна тысяча сто девятнадцать рублей ноль копеек";
+            Assert.AreEqual(expected, formatter.Build(21119));
+
+            expected = "двенадцать тысяч сто девятнадцать рублей ноль копеек";
+            Assert.AreEqual(expected, formatter.Build(12119));
 
 
             expected = "один миллион рублей ноль копеек";
