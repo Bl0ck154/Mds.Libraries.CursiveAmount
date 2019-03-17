@@ -2,14 +2,14 @@
 using Mds.Libraries.CursiveAmount.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Mds.Libraries.CursiveAmount.Tests.Russian
+namespace Mds.Libraries.CursiveAmount.Tests.English
 {
     [TestClass]
-    public class ENGTests
+    public class USDTests
     {
         private ICurrencyFormatter formatter;
 
-        public ENGTests()
+        public USDTests()
         {
             formatter = CurrencyFormatterFactory.Build(Language.English, Currency.USD);
         }
