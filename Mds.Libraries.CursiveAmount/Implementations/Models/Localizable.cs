@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Mds.Libraries.CursiveAmount.Implementations.Models
 {
     internal class Localizable
     {
-        internal Localizable(int divider = 10)
+        internal Localizable()
         {
             Default = string.Empty;
             Patcher = (long number, string value) => value;
 
 
             Values = new Dictionary<long, string>();
-            Divider = divider;
         }
 
 
@@ -21,7 +21,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations.Models
         internal Func<long, string, string> Patcher { get; set; }
 
         private Dictionary<long, string> Values { get; }
-        private int Divider { get; }
 
         internal string this[long key]
         {
@@ -34,16 +33,19 @@ namespace Mds.Libraries.CursiveAmount.Implementations.Models
 
         internal string Prepare(long value)
         {
-            value = value % Divider;
+            var stringed = value.ToString();
+            var keys = Values.Keys.OrderByDescending(k => k)
+                                  .Select(k => k.ToString());
 
-            if (Values.ContainsKey(value))
+            foreach (var key in keys)
             {
-                return Values[value];
+                if (stringed.EndsWith(key))
+                {
+                    return Values[Convert.ToInt64(key)];
+                }
             }
-            else
-            {
-                return Default;
-            }
+
+            return Default;
         }
     }
 }
