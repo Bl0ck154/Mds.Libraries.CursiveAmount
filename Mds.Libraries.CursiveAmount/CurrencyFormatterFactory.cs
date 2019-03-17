@@ -16,7 +16,7 @@ namespace Mds.Libraries.CursiveAmount
                     return lang.RussianRuble;
 
                 case Currency.USD:
-                    return lang.RussianRuble;
+                    return lang.USDollar;
 
                 default:
                     return default(ICurrencyFormatter);
