@@ -172,7 +172,7 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                         [12] = "долларов",
                         [13] = "долларов",
                         [14] = "долларов",
-                        Default = "доллара"
+                        Default = "долларов"
                     },
                     MinorCurrency = new Localizable()
                     {
