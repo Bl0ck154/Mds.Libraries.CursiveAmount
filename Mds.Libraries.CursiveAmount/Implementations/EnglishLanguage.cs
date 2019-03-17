@@ -11,12 +11,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
 
         private Dictionary<long, Localizable> Grades { get; } = new Dictionary<long, Localizable>()
         {
-            //[100] = new Localizable()
-            //{
-            //    [1] = "hundred",
-            //    Default = "hundreds"
-            //},
-
             [1000] = new Localizable()
             {
                 [1] = "thousand",
