@@ -74,7 +74,7 @@ namespace Mds.Libraries.CursiveAmount.Implementations
 
 
         #region ILanguage
-        ICurrencyFormatter ILanguage.RussianRuble
+        ICurrencyFormatter ILanguage.USDollar
         {
             get
             {
@@ -89,6 +89,28 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     {
                         [1] = "cent",
                         Default = "cents"
+                    }
+                };
+
+                return formatter;
+            }
+        }
+
+        ICurrencyFormatter ILanguage.RussianRuble
+        {
+            get
+            {
+                var formatter = new CurrencyFormatter(Grades, Numbers)
+                {
+                    MajorCurrency = new Localizable()
+                    {
+                        [1] = "ruble",
+                        Default = "rubles"
+                    },
+                    MinorCurrency = new Localizable()
+                    {
+                        [1] = "kopek",
+                        Default = "kopecks"
                     }
                 };
 

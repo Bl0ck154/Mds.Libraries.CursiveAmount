@@ -129,6 +129,30 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                 return formatter;
             }
         }
+
+        ICurrencyFormatter ILanguage.USDollar
+        {
+            get
+            {
+                var formatter = new CurrencyFormatter(Grades, Numbers)
+                {
+                    MajorCurrency = new Localizable()
+                    {
+                        [0] = "долларов",
+                        [1] = "доллар",
+                        Default = "доллара"
+                    },
+                    MinorCurrency = new Localizable()
+                    {
+                        [0] = "центов",
+                        [1] = "цент",
+                        Default = "цента"
+                    }
+                };
+
+                return formatter;
+            }
+        }
         #endregion
     }
 }
