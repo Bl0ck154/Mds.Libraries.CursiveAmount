@@ -117,6 +117,10 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                         [2] = "рубля",
                         [3] = "рубля",
                         [4] = "рубля",
+                        [11] = "рублей",
+                        [12] = "рублей",
+                        [13] = "рублей",
+                        [14] = "рублей",
                         Default = "рублей"
                     },
                     MinorCurrency = new Localizable()
@@ -126,6 +130,10 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                         [2] = "копейки",
                         [3] = "копейки",
                         [4] = "копейки",
+                        [11] = "копеек",
+                        [12] = "копеек",
+                        [13] = "копеек",
+                        [14] = "копеек",
                         Default = "копеек",
                         Patcher = (long number, string value) =>
                         {
@@ -157,12 +165,26 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     {
                         [0] = "долларов",
                         [1] = "доллар",
+                        [2] = "доллара",
+                        [3] = "доллара",
+                        [4] = "доллара",
+                        [11] = "долларов",
+                        [12] = "долларов",
+                        [13] = "долларов",
+                        [14] = "долларов",
                         Default = "доллара"
                     },
                     MinorCurrency = new Localizable()
                     {
                         [0] = "центов",
                         [1] = "цент",
+                        [2] = "цента",
+                        [3] = "цента",
+                        [4] = "цента",
+                        [11] = "центов",
+                        [12] = "центов",
+                        [13] = "центов",
+                        [14] = "центов",
                         Default = "цента"
                     }
                 };
