@@ -73,16 +73,24 @@ namespace Mds.Libraries.CursiveAmount.Implementations.Models
             var ten = (value - hundred * 100) / 10;
             var one = value % 10;
 
-
             if (0 != hundred)
             {
                 yield return Localize(hundred * 100, localizable);
             }
 
-            if (0 != ten)
+
+            if (value % 100 >= 20)
             {
-                yield return Localize(ten * 10, localizable);
+                if (0 != ten)
+                {
+                    yield return Localize(ten * 10, localizable);
+                }
             }
+            else
+            {
+                one = value % 100;
+            }
+
 
             if (0 != one || (0 == hundred && 0 == ten && isMust))
             {

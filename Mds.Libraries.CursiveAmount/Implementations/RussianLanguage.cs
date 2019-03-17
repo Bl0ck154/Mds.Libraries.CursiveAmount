@@ -13,9 +13,15 @@ namespace Mds.Libraries.CursiveAmount.Implementations
         {
             [1000] = new Localizable()
             {
-                [0] = "тысяч",
                 [1] = "тысяча",
-                Default = "тысячи",
+                [2] = "тысячи",
+                [3] = "тысячи",
+                [4] = "тысячи",
+                [11] = "тысяч",
+                [12] = "тысяч",
+                [13] = "тысяч",
+                [14] = "тысяч",
+                Default = "тысяч",
                 Patcher = (long number, string value) =>
                 {
                     switch (number)
@@ -33,14 +39,19 @@ namespace Mds.Libraries.CursiveAmount.Implementations
 
             [1000000] = new Localizable()
             {
-                [0] = "миллионов",
                 [1] = "миллион",
-                Default = "миллиона"
+                [2] = "миллиона",
+                [3] = "миллиона",
+                [4] = "миллиона",
+                [11] = "миллионов",
+                [12] = "миллионов",
+                [13] = "миллионов",
+                [14] = "миллионов",
+                Default = "миллионов"
             },
 
             [1000000000] = new Localizable()
             {
-                [0] = "миллиардов",
                 [1] = "миллиард",
                 [2] = "миллиарда",
                 [3] = "миллиарда",
@@ -103,13 +114,19 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     {
                         [0] = "рублей",
                         [1] = "рубль",
-                        Default = "рубля"
+                        [2] = "рубля",
+                        [3] = "рубля",
+                        [4] = "рубля",
+                        Default = "рублей"
                     },
                     MinorCurrency = new Localizable()
                     {
                         [0] = "копеек",
                         [1] = "копейка",
-                        Default = "копейки",
+                        [2] = "копейки",
+                        [3] = "копейки",
+                        [4] = "копейки",
+                        Default = "копеек",
                         Patcher = (long number, string value) =>
                         {
                             switch (number)
