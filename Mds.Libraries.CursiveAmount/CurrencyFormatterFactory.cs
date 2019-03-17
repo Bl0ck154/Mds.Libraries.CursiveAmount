@@ -15,6 +15,9 @@ namespace Mds.Libraries.CursiveAmount
                 case Currency.RUB:
                     return lang.RussianRuble;
 
+                case Currency.USD:
+                    return lang.RussianRuble;
+
                 default:
                     return default(ICurrencyFormatter);
             }
@@ -25,6 +28,9 @@ namespace Mds.Libraries.CursiveAmount
             {
                 case Language.Russian:
                     return new RussianLanguage();
+
+                case Language.English:
+                    return new EnglishLanguage();
 
                 default:
                     return default(ILanguage);
