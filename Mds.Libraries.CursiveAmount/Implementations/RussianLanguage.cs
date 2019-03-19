@@ -185,7 +185,7 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                         [12] = "центов",
                         [13] = "центов",
                         [14] = "центов",
-                        Default = "цента"
+                        Default = "центов"
                     }
                 };
 
