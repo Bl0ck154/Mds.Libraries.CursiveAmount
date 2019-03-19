@@ -82,7 +82,7 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             [12] = "twelve",
             [13] = "thirteen",
             [14] = "fourteen",
-            [15] = "fiveteen",
+            [15] = "fifteen",
             [16] = "sixteen",
             [17] = "seventeen",
             [18] = "eighteen",
