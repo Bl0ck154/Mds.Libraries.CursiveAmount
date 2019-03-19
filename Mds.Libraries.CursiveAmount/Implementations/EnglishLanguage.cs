@@ -182,19 +182,19 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     MinorCurrency = new Localizable()
                     {
                         [1] = "kopek",
-                        [11] = "kopecks",
-                        [12] = "kopecks",
-                        [13] = "kopecks",
-                        [14] = "kopecks",
-                        [21] = "kopecks",
-                        [31] = "kopecks",
-                        [41] = "kopecks",
-                        [51] = "kopecks",
-                        [61] = "kopecks",
-                        [71] = "kopecks",
-                        [81] = "kopecks",
-                        [91] = "kopecks",
-                        Default = "kopecks"
+                        [11] = "kopeks",
+                        [12] = "kopeks",
+                        [13] = "kopeks",
+                        [14] = "kopeks",
+                        [21] = "kopeks",
+                        [31] = "kopeks",
+                        [41] = "kopeks",
+                        [51] = "kopeks",
+                        [61] = "kopeks",
+                        [71] = "kopeks",
+                        [81] = "kopeks",
+                        [91] = "kopeks",
+                        Default = "kopeks"
                     }
                 };
 
