@@ -14,9 +14,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             [1000] = new Localizable()
             {
                 [1] = "thousand",
-                [2] = "thousands",
-                [3] = "thousands",
-                [4] = "thousands",
                 [11] = "thousands",
                 [12] = "thousands",
                 [13] = "thousands",
@@ -35,9 +32,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             [1000000] = new Localizable()
             {
                 [1] = "million",
-                [2] = "millions",
-                [3] = "millions",
-                [4] = "millions",
                 [11] = "millions",
                 [12] = "millions",
                 [13] = "millions",
@@ -56,9 +50,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
             [1000000000] = new Localizable()
             {
                 [1] = "billion",
-                [2] = "billions",
-                [3] = "billions",
-                [4] = "billions",
                 [11] = "billions",
                 [12] = "billions",
                 [13] = "billions",
@@ -128,9 +119,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     MajorCurrency = new Localizable()
                     {
                         [1] = "dollar",
-                        [2] = "dollars",
-                        [3] = "dollars",
-                        [4] = "dollars",
                         [11] = "dollars",
                         [12] = "dollars",
                         [13] = "dollars",
@@ -148,9 +136,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     MinorCurrency = new Localizable()
                     {
                         [1] = "cent",
-                        [2] = "cents",
-                        [3] = "cents",
-                        [4] = "cents",
                         [11] = "cents",
                         [12] = "cents",
                         [13] = "cents",
@@ -180,9 +165,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     MajorCurrency = new Localizable()
                     {
                         [1] = "ruble",
-                        [2] = "rubles",
-                        [3] = "rubles",
-                        [4] = "rubles",
                         [11] = "rubles",
                         [12] = "rubles",
                         [13] = "rubles",
@@ -200,9 +182,6 @@ namespace Mds.Libraries.CursiveAmount.Implementations
                     MinorCurrency = new Localizable()
                     {
                         [1] = "kopek",
-                        [2] = "kopecks",
-                        [3] = "kopecks",
-                        [4] = "kopecks",
                         [11] = "kopecks",
                         [12] = "kopecks",
                         [13] = "kopecks",
