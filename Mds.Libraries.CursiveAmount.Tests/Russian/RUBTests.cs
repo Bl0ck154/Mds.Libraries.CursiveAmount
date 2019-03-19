@@ -109,5 +109,21 @@ namespace Mds.Libraries.CursiveAmount.Tests.Russian
             expected = "двести тридцать шесть миллиардов четыреста шестьдесят один миллион семьсот восемьдесят две тысячи девятьсот восемьдесят три рубля двадцать одна копейка";
             Assert.AreEqual(expected, formatter.Build(236461782983.21));
         }
+        
+        [TestMethod]
+        public void RussianRUBPrecedent()
+        {
+            var expected = "два рубля пятнадцать копеек";
+            Assert.AreEqual(expected, formatter.Build(2.15));
+
+            expected = "три рубля шестнадцать копеек";
+            Assert.AreEqual(expected, formatter.Build(3.16));
+
+            expected = "четыре рубля двадцать шесть копеек";
+            Assert.AreEqual(expected, formatter.Build(4.26));
+
+            expected = "двадцать семь рублей двадцать восемь копеек";
+            Assert.AreEqual(expected, formatter.Build(27.28));
+        }
     }
 }

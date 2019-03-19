@@ -109,5 +109,21 @@ namespace Mds.Libraries.CursiveAmount.Tests.English
             expected = "two hundred thirty six billions four hundred sixty one millions seven hundred eighty two thousands nine hundred eighty three dollars twenty one cents";
             Assert.AreEqual(expected, formatter.Build(236461782983.21));
         }
+
+        [TestMethod]
+        public void USDollarPrecedent()
+        {
+            var expected = "two dollars fifteen cents";
+            Assert.AreEqual(expected, formatter.Build(2.15));
+
+            expected = "three dollars sixteen cents";
+            Assert.AreEqual(expected, formatter.Build(3.16));
+
+            expected = "four dollars twenty six cents";
+            Assert.AreEqual(expected, formatter.Build(4.26));
+
+            expected = "twenty seven dollars twenty eight cents";
+            Assert.AreEqual(expected, formatter.Build(27.28));
+        }
     }
 }
